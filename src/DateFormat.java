@@ -25,6 +25,20 @@ public class DateFormat
 		System.out.println("\t "+ year);
 		System.out.println("\t " + Months[month]);
 		int d = gc.get(Calendar.DAY_OF_WEEK);
+		//System.out.println("S\t M\t T\t W\t Th\tF\t S");
+		System.out.printf("%3s %3s %3s %3s %3s %3s %3s \n",'S','M','T','W','T','F','S' );
+		 d= d-1;
+		for (int i=0; i<d;i++){
+			System.out.print("   ");}
+			
+		for (int j=1; j <= Days[month]; j++){
+				System.out.printf(" %2d ", j);
+				if ((j+d)% 7==0 || j== Days[month]) {
+					System.out.println();
+				}
+			
+		}
+		
 		
 		
 		
